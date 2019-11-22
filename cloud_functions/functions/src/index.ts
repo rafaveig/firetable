@@ -1,5 +1,5 @@
 import * as functions from "firebase-functions";
-import * as maps from "./maps";
+//import * as maps from "./maps";
 import * as claims from "./claims";
 import { auth } from "./config";
 
@@ -23,7 +23,7 @@ exports.setUserAsAdmin = functions.auth.user().onCreate(async user => {
   return true;
 });
 
-export const MAPS = maps;
+//export const MAPS = maps;
 export const CLAIMS = claims;
 
 export { exportTable } from "./export";
