@@ -64,14 +64,14 @@ const Hotkeys = (props: any) => {
    */
   const handlePaste = async () => {
     const { row, column } = selectedCell;
-    const newValue = await navigator.clipboard.readText();
-    if (stringFields.includes(column.type)) onSubmit(column.key, row)(newValue);
-    else if (numberFields.includes(column.type)) {
-      const numberValue = parseInt(newValue);
-      if (`${numberValue}` !== "NaN") {
-        onSubmit(column.key, row)(numberValue);
-      }
-    }
+    // const newValue = await navigator.clipboard.readText();
+    // if (stringFields.includes(column.type)) onSubmit(column.key, row)(newValue);
+    // else if (numberFields.includes(column.type)) {
+    //   const numberValue = parseInt(newValue);
+    //   if (`${numberValue}` !== "NaN") {
+    //     onSubmit(column.key, row)(numberValue);
+    //   }
+    // }
   };
   const supportedFields = [...stringFields, ...numberFields];
   /**
@@ -80,7 +80,7 @@ const Hotkeys = (props: any) => {
   const handleCopy = () => {
     const { row, column } = selectedCell;
     if (supportedFields.includes(column.type)) {
-      navigator.clipboard.writeText(row[column.key]);
+      // navigator.clipboard.writeText(row[column.key]);
     }
   };
   /**
@@ -89,7 +89,7 @@ const Hotkeys = (props: any) => {
   const handleCut = () => {
     const { row, column } = selectedCell;
     if (supportedFields.includes(column.type)) {
-      navigator.clipboard.writeText(row[column.key]);
+      //  navigator.clipboard.writeText(row[column.key]);
       onSubmit(column.key, row)(null);
     }
   };

@@ -14,12 +14,12 @@ import {
   editable,
   onSubmit,
 } from "./grid-fns";
-import { CLOUD_FUNCTIONS } from "firebase/callables";
+import { CLOUD_FUNCTIONS } from "../../firebase/callables";
 import Typography from "@material-ui/core/Typography";
 import AddIcon from "@material-ui/icons/AddCircle";
 import SettingsIcon from "@material-ui/icons/Settings";
 import useWindowSize from "../../hooks/useWindowSize";
-import Confirmation from "components/Confirmation";
+import Confirmation from "../Confirmation";
 import DeleteIcon from "@material-ui/icons/Delete";
 import DuplicateIcon from "@material-ui/icons/FileCopy";
 import useStyles from "./useStyle";
@@ -114,7 +114,7 @@ function Table(props: Props) {
               <div
                 className={classes.headerLabel}
                 onClick={() => {
-                  navigator.clipboard.writeText(props.column.key);
+                  // navigator.clipboard.writeText(props.column.key);
                 }}
               >
                 {getFieldIcon(props.column.type)}

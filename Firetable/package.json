@@ -1,6 +1,6 @@
 {
   "name": "firetable",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "description": "Excel/Google Sheets like UI for Firebase/Firestore.",
   "license": "MIT",
   "author": "Antler Engineering",
@@ -9,7 +9,10 @@
   "files": [
     "src"
   ],
-  "repository": "AntlerVC/firetable",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AntlerVC/firetable.git"
+  },
   "homepage": "https://github.com/AntlerVC/firetable",
   "bugs": {
     "url": "https://github.com/AntlerVC/firetable/issues"
@@ -29,11 +32,10 @@
     "@types/lodash": "^4.14.138",
     "@types/node": "12.7.4",
     "@types/ramda": "^0.26.21",
-    "@types/react": "^16.9.2",
     "@types/react-color": "^3.0.1",
     "@types/react-data-grid": "^4.0.3",
-    "@types/react-dom": "16.9.0",
     "@types/react-router-dom": "^4.3.5",
+    "@types/react-transition-group": "^4.2.3",
     "algoliasearch": "^3.34.0",
     "bootstrap": "^4.3.1",
     "csv-parse": "^4.4.6",
@@ -44,15 +46,12 @@
     "lodash": "^4.17.15",
     "query-string": "^6.8.3",
     "ramda": "^0.26.1",
-    "react": "^16.9.0",
     "react-color": "^2.17.3",
     "react-data-grid": "^6.1.0",
     "react-data-grid-addons": "^6.1.0",
-    "react-dom": "^16.9.0",
     "react-dropzone": "^10.1.8",
     "react-router-dom": "^5.0.1",
     "start": "^5.1.0",
-    "typescript": "^3.7.2",
     "yarn": "^1.19.0",
     "yup": "^0.27.0"
   },
@@ -71,15 +70,27 @@
       "last 1 safari version"
     ]
   },
+  "scripts": {
+    "build": "rm -rf ./lib && tsc",
+    "prepare": "yarn build"
+  },
   "devDependencies": {
     "@material-ui/codemod": "^4.3.0",
+    "@types/react": "^16.9.11",
+    "@types/react-dom": "^16.9.0",
     "husky": "^3.0.5",
     "prettier": "^1.18.2",
-    "pretty-quick": "^1.11.1"
+    "pretty-quick": "^1.11.1",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "typescript": "^3.7.2"
   },
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
-  }
+  },
+  "keywords": [
+    "Firestore"
+  ]
 }
